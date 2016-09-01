@@ -1,0 +1,7 @@
+<% if @task.completed? %>
+  $('#edit_task_<%= @task.id%>').remove();
+  $('#complete_tasks').append("<%= j render(@task)%>");
+<% else %>
+  $('#edit_task_<%= @task.id%>').remove();
+  $('#incomplete_tasks').append("<%= j render(@task)%>");
+<% end %>
